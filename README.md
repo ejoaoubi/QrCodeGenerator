@@ -18,6 +18,7 @@
   - [AWS S3 Configuration](#aws-s3-configuration)
 - [Application Flow](#application-flow)
 - [API Endpoints](#api-endpoints)
+- [UML Component Diagram](#uml-component-diagram)
 - [License](#license)
 
 A Java 21 and Spring Boot REST application that creates QR codes and stores them in AWS S3. This project demonstrates the integration of  AWS S3 for storage and Google's ZXing library for QR code generation.
@@ -70,8 +71,6 @@ AWS_SECRET_ACCESS_KEY=your_secret_key
    docker run --env-file .env -p 8080:8080 qrcode-generator:1.0
    ```
 
-> Remember to replace the .env file path to the path of your environment file that you created.
-
 ### AWS S3 Configuration
 
 1. Create an S3 bucket in your AWS account
@@ -79,7 +78,6 @@ AWS_SECRET_ACCESS_KEY=your_secret_key
 3. Ensure your AWS credentials have appropriate permissions to access the S3 bucket
 
 ## Application Flow
-
 
 ![image](https://github.com/user-attachments/assets/aa7cdb40-3363-48c2-8400-4fea26044d5b)
 
@@ -122,6 +120,15 @@ curl -X POST http://localhost:8080/qr/ \
 **Example QR Code Generated**
 
 ![image](https://github.com/user-attachments/assets/ad9a41e0-6c2a-4ce5-8508-7f2ebd0c8e6a)
+
+
+
+## UML Component Diagram
+
+This UML diagram illustrates the key components within the com.jesteves.qr package and their relationships, showcasing a layered architecture often associated with Ports and Adapters (Hexagonal Architecture).
+
+
+![image](https://github.com/user-attachments/assets/3969dcd3-29c5-4dba-9956-6ac5288ba9d5)
 
 
 ## License
